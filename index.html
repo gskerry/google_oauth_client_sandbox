@@ -17,10 +17,14 @@
 
         <h3 id="concat"></h3>
 
+        <button type="button" name="button" onclick="auth_call()">MAKE AUTH CALL</button>
+
     <script>
         document.getElementById("location").innerHTML = location
-        var type = document.getElementById("response_type").innerHTML
+
         var url = document.getElementById("authURL").innerHTML
+
+        var type = document.getElementById("response_type").innerHTML
         var clientid = document.getElementById("clientid").innerHTML
         var nonce = document.getElementById("nonce").innerHTML
         var redirect = document.getElementById("redirect").innerHTML
@@ -30,13 +34,13 @@
         var hint = document.getElementById("hint").innerHTML
         var granted = document.getElementById("granted").innerHTML
 
-        var concat = url + "?" + "response_type=" + type + "&" +
+        var concat = url + "?" + "response_type=" + type + "&client_id=" + clientid + "&nonce=" + nonce + "&scope=" + scope + "&prompt=" + prompt
 
         document.getElementById("concat").innerHTML = concat
 
         function auth_call(){
             var jaxreq = new XMLHttpRequest();
-            jaxreq.open("GET", "http://www.example.org/example.txt");
+            jaxreq.open("GET", concat);
             jaxreq.send();
         }
 
