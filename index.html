@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3 id="location"></h3>
+        <label>Auth URL: </label><b id="authURL">https://accounts.google.com/o/oauth2/v2/auth</b><br>
+        <label>response_type: </label><b id="response_type">token</b><br>
+        <label>client_id: </label><b id="clientid">685462996765-fen7n3id7ccpnchq4n4r0ffhnbgke7o9.apps.googleusercontent.com</b><br>
+        <label>nonce: </label><b id="nonce">DgkRrHXmyu3KLd0KDdfq</b><br>
+        <label>redirect_uri: </label><b id="redirect"></b><br>
+        <label>scope: </label><b id="scope">email%20profile</b><br>
+        <label>state: </label><b id="state"></b><br>
+        <label>prompt: </label><b id="prompt">select_account%20consent</b><br>
+        <label>login_hint: </label><b id="hint"></b><br>
+        <label>include_granted_scopes: </label><b id="granted"></b><br>
+
+        <h3 id="concat"></h3>
+
+    <script>
+        document.getElementById("location").innerHTML = location
+        var type = document.getElementById("response_type").innerHTML
+        var url = document.getElementById("authURL").innerHTML
+        var clientid = document.getElementById("clientid").innerHTML
+        var nonce = document.getElementById("nonce").innerHTML
+        var redirect = document.getElementById("redirect").innerHTML
+        var scope = document.getElementById("scope").innerHTML
+        var state = document.getElementById("state").innerHTML
+        var prompt = document.getElementById("prompt").innerHTML
+        var hint = document.getElementById("hint").innerHTML
+        var granted = document.getElementById("granted").innerHTML
+
+        var concat = url + "?" + "response_type=" + type + "&" + 
+
+        document.getElementById("concat").innerHTML = concat
+
+    </script>
+
+    </body>
+</html>
