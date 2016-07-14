@@ -30,9 +30,15 @@
         var hint = document.getElementById("hint").innerHTML
         var granted = document.getElementById("granted").innerHTML
 
-        var concat = url + "?" + "response_type=" + type + "&" + 
+        var concat = url + "?" + "response_type=" + type + "&" +
 
         document.getElementById("concat").innerHTML = concat
+
+        function auth_call(){
+            var jaxreq = new XMLHttpRequest();
+            jaxreq.open("GET", "http://www.example.org/example.txt");
+            jaxreq.send();
+        }
 
     </script>
 
